@@ -1,0 +1,131 @@
+{
+  "certificate_id": "baseline_detector_seed_sweep_v1_9",
+  "claim_type": "detector_output_audit_seed_sweep",
+  "seeds": {
+    "n": 50,
+    "start": 1900,
+    "end": 1949
+  },
+  "detectors": [
+    "GMM-proxy",
+    "Gaussian-HMM-style-proxy",
+    "change-point",
+    "threshold"
+  ],
+  "worlds": [
+    "coarse_stride_switching",
+    "hidden_supported",
+    "occupancy_migration",
+    "stable_null",
+    "surface_phantom"
+  ],
+  "evidence": {
+    "n_detector_world_seed_rows": 1000,
+    "positive_rate_summary": [
+      {
+        "world": "coarse_stride_switching",
+        "detector": "GMM-proxy",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "coarse_stride_switching",
+        "detector": "Gaussian-HMM-style-proxy",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "coarse_stride_switching",
+        "detector": "change-point",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "coarse_stride_switching",
+        "detector": "threshold",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "hidden_supported",
+        "detector": "GMM-proxy",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "hidden_supported",
+        "detector": "Gaussian-HMM-style-proxy",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "hidden_supported",
+        "detector": "change-point",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "hidden_supported",
+        "detector": "threshold",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "occupancy_migration",
+        "detector": "GMM-proxy",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "occupancy_migration",
+        "detector": "Gaussian-HMM-style-proxy",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "occupancy_migration",
+        "detector": "change-point",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "occupancy_migration",
+        "detector": "threshold",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "stable_null",
+        "detector": "GMM-proxy",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "stable_null",
+        "detector": "Gaussian-HMM-style-proxy",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "stable_null",
+        "detector": "change-point",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "stable_null",
+        "detector": "threshold",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "surface_phantom",
+        "detector": "GMM-proxy",
+        "positive_rate": 1.0
+      },
+      {
+        "world": "surface_phantom",
+        "detector": "Gaussian-HMM-style-proxy",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "surface_phantom",
+        "detector": "change-point",
+        "positive_rate": 0.0
+      },
+      {
+        "world": "surface_phantom",
+        "detector": "threshold",
+        "positive_rate": 1.0
+      }
+    ]
+  },
+  "interpretation": [
+    "Baseline detector decisions vary by detector and synthetic world.",
+    "RRC reports the claim scope licensed by support, protocol, persistence, and selection fields rather than treating a positive detector decision as a valid regime claim."
+  ]
+}

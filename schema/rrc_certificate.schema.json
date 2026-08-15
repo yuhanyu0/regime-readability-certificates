@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yuhanyu0/regime-readability-certificates/blob/main/schema/rrc_certificate.schema.json",
+  "title": "Regime Readability Certificate",
+  "type": "object",
+  "required": ["claim_id", "protocol", "readability_status", "support_scope", "persistence_status", "selection_status", "guard_status"],
+  "properties": {
+    "claim_id": {"type": "string", "minLength": 1},
+    "protocol": {"type": ["object", "string"]},
+    "readability_status": {"enum": ["identified", "hidden", "phantom", "not_identifiable", "ambiguous", "protocol_sensitive", "rejected"]},
+    "support_scope": {"enum": ["oracle_asserted", "not_asserted", "support_rejected", "not_tested"]},
+    "persistence_status": {"enum": ["stable", "protocol_sensitive", "unstable", "not_identifiable", "not_tested"]},
+    "selection_status": {"enum": ["not_selected", "discovery_only", "split_confirmed", "partially_confirmed", "unadjusted", "restricted_maxnull_passed", "null_family_sensitive", "multi_null_confirmed", "candidate_specific_multi_null_confirmed", "not_applicable"]},
+    "guard_status": {"enum": ["pass", "fail", "not_tested", "not_applicable"]},
+    "evidence": {"type": ["object", "array", "string", "number", "null"]},
+    "notes": {"type": ["string", "array", "null"]}
+  },
+  "additionalProperties": true
+}

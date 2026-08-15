@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "synthetic_coarse_stride_switching",
+    "protocol": "baseline_detector_audit_v1_6",
+    "readability_status": "not_identifiable",
+    "support_scope": "oracle_asserted",
+    "persistence_status": "not_identifiable",
+    "selection_status": "not_applicable",
+    "guard_status": "not_tested",
+    "evidence": {"detector_outputs": {"GMM": false, "HMM": false, "change_point": false, "threshold": false}},
+    "notes": "coarse stride leaves too few transition opportunities"
+  },
+  {
+    "claim_id": "synthetic_hidden_supported",
+    "protocol": "baseline_detector_audit_v1_6",
+    "readability_status": "hidden",
+    "support_scope": "oracle_asserted",
+    "persistence_status": "not_tested",
+    "selection_status": "not_applicable",
+    "guard_status": "not_tested",
+    "evidence": {"detector_outputs": {"GMM": false, "HMM": false, "change_point": false, "threshold": true}},
+    "notes": "weak interface hides an oracle-supported split"
+  },
+  {
+    "claim_id": "synthetic_occupancy_migration",
+    "protocol": "baseline_detector_audit_v1_6",
+    "readability_status": "identified",
+    "support_scope": "not_asserted",
+    "persistence_status": "not_tested",
+    "selection_status": "not_applicable",
+    "guard_status": "not_tested",
+    "evidence": {"detector_outputs": {"GMM": true, "HMM": true, "change_point": true, "threshold": true}},
+    "notes": "regime-change readout is migration across phase space, not fixed-slice switching"
+  },
+  {
+    "claim_id": "synthetic_stable_null",
+    "protocol": "baseline_detector_audit_v1_6",
+    "readability_status": "not_identifiable",
+    "support_scope": "support_rejected",
+    "persistence_status": "not_tested",
+    "selection_status": "not_applicable",
+    "guard_status": "not_tested",
+    "evidence": {"detector_outputs": {"GMM": false, "HMM": false, "change_point": false, "threshold": true}},
+    "notes": "low signal should not be promoted"
+  },
+  {
+    "claim_id": "synthetic_surface_phantom",
+    "protocol": "baseline_detector_audit_v1_6",
+    "readability_status": "phantom",
+    "support_scope": "support_rejected",
+    "persistence_status": "unstable",
+    "selection_status": "not_applicable",
+    "guard_status": "not_tested",
+    "evidence": {"detector_outputs": {"GMM": true, "HMM": false, "change_point": false, "threshold": true}},
+    "notes": "visible separation without generator support"
+  }
+]

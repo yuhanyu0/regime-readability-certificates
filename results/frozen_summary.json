@@ -1,0 +1,106 @@
+{
+  "artifact_version": "v0.1",
+  "manuscript_source_version": "v3.7",
+  "core_claim": "A detector output is not a regime claim by itself.",
+  "synthetic": {
+    "detector_benchmark_worlds": 5,
+    "detector_benchmark_detectors": 4,
+    "detector_benchmark_pairs": 20,
+    "seed_sweep_seeds": 50,
+    "readability_transition_alpha_points": 31,
+    "readability_transition_rows": 620,
+    "resource_atlas_cells": 190,
+    "support_scope": "oracle_asserted",
+    "transition_not_physical_phase": true
+  },
+  "market": {
+    "protocol_lattice_certificates": 3888,
+    "strict_protocol_rows": 144,
+    "strict_status_counts": {
+      "identified_readout": 39,
+      "ambiguous": 48,
+      "not_identifiable": 57
+    },
+    "support_scope": "not_asserted",
+    "discovery_2021": {
+      "discovered": 7,
+      "confirmed": 3,
+      "not_identifiable": 4
+    },
+    "bootstrap": {
+      "certificate_id": "market_primary_gmm_bootstrap_v2_1",
+      "audit_type": "primary_gmm_moving_block_bootstrap",
+      "support_scope": "not_asserted",
+      "candidate_bands": 8,
+      "block_lengths": [60, 90, 120],
+      "replicates_per_block_length": 500,
+      "total_gmm_bootstrap_replicates": 12000,
+      "min_state_n": 80,
+      "min_state_frac": 0.1,
+      "delta_BIC_threshold": 10.0,
+      "status_counts": {"primary_gmm_bootstrap_stable": 5, "primary_gmm_bootstrap_protocol_sensitive": 3},
+      "note": "Primary GMM bootstrap for selected fixed bands. This audits persistence of readout, not generator support."
+    },
+    "restricted_multi_null": {
+      "certificate_id": "market_multinull_primary_gmm_audit_v2_3",
+      "audit_type": "multi_null_primary_gmm_maxnull_lattice_audit",
+      "support_scope": "not_asserted",
+      "restricted_lattice_protocols": 105,
+      "null_families": ["ipr_iid_permutation", "ipr_circular_shift", "ipr_moving_block_resample"],
+      "null_descriptions": {
+        "ipr_iid_permutation": "Permute IPR values iid relative to q; preserves marginal IPR distribution but destroys temporal dependence and q-IPR alignment.",
+        "ipr_circular_shift": "Circularly shift the full IPR trajectory relative to q; preserves the full IPR trajectory and autocorrelation while breaking calendar alignment.",
+        "ipr_moving_block_resample": "Moving-block resample IPR relative to fixed q; approximately preserves local IPR dependence while breaking q-IPR alignment."
+      },
+      "null_replicates_per_family": 100,
+      "block_len": 90,
+      "min_state_n": 80,
+      "min_state_frac": 0.1,
+      "delta_BIC_threshold": 10.0,
+      "intersection_status_counts": {"unadjusted_readout_only": 57, "ambiguous": 36, "not_identifiable": 7, "null_family_sensitive": 5},
+      "per_null_status_counts": {
+        "ipr_circular_shift": {"ambiguous": 36, "multi_null_confirmed": 0, "not_identifiable": 7, "unadjusted_readout_only": 62},
+        "ipr_iid_permutation": {"ambiguous": 36, "multi_null_confirmed": 5, "not_identifiable": 7, "unadjusted_readout_only": 57},
+        "ipr_moving_block_resample": {"ambiguous": 36, "multi_null_confirmed": 0, "not_identifiable": 7, "unadjusted_readout_only": 62}
+      },
+      "schema_mapping": {
+        "null_family_sensitive": {"readability_status": "protocol_sensitive", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "null_family_sensitive"},
+        "multi_null_confirmed": {"readability_status": "identified", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "multi_null_confirmed"},
+        "unadjusted_readout_only": {"readability_status": "identified", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "unadjusted"}
+      },
+      "note": "Multi-null restricted primary-GMM max-null audit. It tests null-family sensitivity of empirical readout selection and does not assert generator support or universal family-wise inference over all possible protocols. Null-family sensitivity is encoded in selection_status rather than introduced as a new readability label."
+    },
+    "focused_multi_null": {
+      "certificate_id": "market_multinull_focus_audit_v2_4",
+      "audit_type": "high_replicate_focused_multi_null_primary_gmm_audit",
+      "support_scope": "not_asserted",
+      "B_per_null_family": 500,
+      "block_len": 90,
+      "top_k_observed_candidates": 12,
+      "null_families": ["ipr_iid_permutation", "ipr_circular_shift", "ipr_moving_block_resample"],
+      "null_descriptions": {
+        "ipr_iid_permutation": "Permute IPR values iid relative to q; preserves marginal IPR distribution but destroys temporal dependence and q-IPR alignment.",
+        "ipr_circular_shift": "Circularly shift the full IPR trajectory relative to q; preserves the full IPR trajectory and autocorrelation while breaking calendar alignment.",
+        "ipr_moving_block_resample": "Moving-block resample IPR relative to fixed q; approximately preserves local IPR dependence while breaking q-IPR alignment."
+      },
+      "status_counts": {"null_family_sensitive": 9, "unadjusted_readout_only": 3},
+      "schema_mapping": {
+        "candidate_set_multi_null_confirmed": {"readability_status": "identified", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "multi_null_confirmed"},
+        "candidate_specific_multi_null_confirmed": {"readability_status": "identified", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "candidate_specific_multi_null_confirmed"},
+        "null_family_sensitive": {"readability_status": "protocol_sensitive", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "null_family_sensitive"},
+        "unadjusted_readout_only": {"readability_status": "identified", "support_scope": "not_asserted", "persistence_status": "not_tested", "selection_status": "unadjusted"}
+      },
+      "note": "High-replicate focused follow-up for the strongest observed candidates. It improves p-value precision for candidate-specific and top-candidate-set null audits, but it does not replace the full restricted-lattice multi-null audit and does not assert generator support."
+    },
+    "exact_frozen_market_rerun_self_contained": false,
+    "missing_for_exact_rerun": ["market_atlas_series.csv and/or the exact cached market_prices_auto.csv used for the frozen run"]
+  },
+  "claim_flags": {
+    "universal_detector": false,
+    "market_regime_ontology": false,
+    "trading_signal": false,
+    "worldhood_or_cross_protocol_gluing": false,
+    "all_states_created_by_protocols": false,
+    "universal_familywise_inference": false
+  }
+}

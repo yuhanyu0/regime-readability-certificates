@@ -1,0 +1,21 @@
+world,detector,n_seeds,positive_rate,statistic_median,statistic_q05,statistic_q95,readability_status,support_scope,persistence_status,selection_status,audit_interpretation
+coarse_stride_switching,GMM-proxy,50,0.0,,,,not_identifiable,oracle_asserted,not_identifiable,not_applicable,coarse stride leaves too few transition opportunities
+coarse_stride_switching,Gaussian-HMM-style-proxy,50,0.0,,,,not_identifiable,oracle_asserted,not_identifiable,not_applicable,coarse stride leaves too few transition opportunities
+coarse_stride_switching,change-point,50,0.0,,,,not_identifiable,oracle_asserted,not_identifiable,not_applicable,coarse stride leaves too few transition opportunities
+coarse_stride_switching,threshold,50,0.0,0.0,0.0,0.0,not_identifiable,oracle_asserted,not_identifiable,not_applicable,coarse stride leaves too few transition opportunities
+hidden_supported,GMM-proxy,50,1.0,489.9790718693553,466.1143398513011,524.8980258454433,hidden,oracle_asserted,not_tested,not_applicable,weak interface hides an oracle-supported split
+hidden_supported,Gaussian-HMM-style-proxy,50,0.0,489.9790718693553,466.1143398513011,524.8980258454433,hidden,oracle_asserted,not_tested,not_applicable,weak interface hides an oracle-supported split
+hidden_supported,change-point,50,0.0,-8.42259786084802,-10.899880748412272,-4.116624844601482,hidden,oracle_asserted,not_tested,not_applicable,weak interface hides an oracle-supported split
+hidden_supported,threshold,50,1.0,1.7210346718573506,1.6745981757987163,1.7702865059102193,hidden,oracle_asserted,not_tested,not_applicable,weak interface hides an oracle-supported split
+occupancy_migration,GMM-proxy,50,1.0,991.8425334335664,968.4601858779242,1021.2878855557365,identified,not_asserted,not_tested,not_applicable,"regime-change readout is migration across phase space, not fixed-slice switching"
+occupancy_migration,Gaussian-HMM-style-proxy,50,1.0,991.8425334335664,968.4601858779242,1021.2878855557365,identified,not_asserted,not_tested,not_applicable,"regime-change readout is migration across phase space, not fixed-slice switching"
+occupancy_migration,change-point,50,1.0,979.6556106233833,947.9871034048899,1001.6982483430901,identified,not_asserted,not_tested,not_applicable,"regime-change readout is migration across phase space, not fixed-slice switching"
+occupancy_migration,threshold,50,1.0,1.8365496454726409,1.8206224343055966,1.8469606237449034,identified,not_asserted,not_tested,not_applicable,"regime-change readout is migration across phase space, not fixed-slice switching"
+stable_null,GMM-proxy,50,1.0,488.01769395997496,462.2302472136692,519.323964062423,not_identifiable,support_rejected,not_tested,not_applicable,low signal should not be promoted
+stable_null,Gaussian-HMM-style-proxy,50,0.0,488.01769395997496,462.2302472136692,519.323964062423,not_identifiable,support_rejected,not_tested,not_applicable,low signal should not be promoted
+stable_null,change-point,50,0.0,-8.938560421761359,-10.702832236693327,-3.7373972190322178,not_identifiable,support_rejected,not_tested,not_applicable,low signal should not be promoted
+stable_null,threshold,50,1.0,1.7119302005854204,1.6750375109976947,1.7643305515462822,not_identifiable,support_rejected,not_tested,not_applicable,low signal should not be promoted
+surface_phantom,GMM-proxy,50,1.0,1367.3514463620909,1319.2712327026497,1422.0316587536204,phantom,support_rejected,unstable,not_applicable,visible separation without generator support
+surface_phantom,Gaussian-HMM-style-proxy,50,0.0,1367.3514463620909,1319.2712327026497,1422.0316587536204,phantom,support_rejected,unstable,not_applicable,visible separation without generator support
+surface_phantom,change-point,50,0.0,-8.568182174409174,-10.721662755630012,-4.137907192304006,phantom,support_rejected,unstable,not_applicable,visible separation without generator support
+surface_phantom,threshold,50,1.0,1.766908110889973,1.6642163735133686,1.8353798497079135,phantom,support_rejected,unstable,not_applicable,visible separation without generator support

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the project and working manuscript."
+title: "Regime Readability Certificates: Relational State Claims under Observation and Compression"
+type: software
+authors:
+  - family-names: Yu
+    given-names: Hanyu
+year: 2026
+repository-code: "https://github.com/yuhanyu0/regime-readability-certificates"

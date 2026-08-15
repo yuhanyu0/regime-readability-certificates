@@ -1,0 +1,21 @@
+{
+  "certificate_id": "market_primary_gmm_bootstrap_v2_1",
+  "audit_type": "primary_gmm_moving_block_bootstrap",
+  "support_scope": "not_asserted",
+  "candidate_bands": 8,
+  "block_lengths": [
+    60,
+    90,
+    120
+  ],
+  "replicates_per_block_length": 500,
+  "total_gmm_bootstrap_replicates": 12000,
+  "min_state_n": 80,
+  "min_state_frac": 0.1,
+  "delta_BIC_threshold": 10.0,
+  "status_counts": {
+    "primary_gmm_bootstrap_stable": 5,
+    "primary_gmm_bootstrap_protocol_sensitive": 3
+  },
+  "note": "Primary GMM bootstrap for selected fixed bands. This audits persistence of readout, not generator support."
+}

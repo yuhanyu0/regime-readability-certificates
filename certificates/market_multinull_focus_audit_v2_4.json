@@ -1,0 +1,49 @@
+{
+  "certificate_id": "market_multinull_focus_audit_v2_4",
+  "audit_type": "high_replicate_focused_multi_null_primary_gmm_audit",
+  "support_scope": "not_asserted",
+  "B_per_null_family": 500,
+  "block_len": 90,
+  "top_k_observed_candidates": 12,
+  "null_families": [
+    "ipr_iid_permutation",
+    "ipr_circular_shift",
+    "ipr_moving_block_resample"
+  ],
+  "null_descriptions": {
+    "ipr_iid_permutation": "Permute IPR values iid relative to q; preserves marginal IPR distribution but destroys temporal dependence and q-IPR alignment.",
+    "ipr_circular_shift": "Circularly shift the full IPR trajectory relative to q; preserves the full IPR trajectory and autocorrelation while breaking calendar alignment.",
+    "ipr_moving_block_resample": "Moving-block resample IPR relative to fixed q; approximately preserves local IPR dependence while breaking q-IPR alignment."
+  },
+  "status_counts": {
+    "null_family_sensitive": 9,
+    "unadjusted_readout_only": 3
+  },
+  "schema_mapping": {
+    "candidate_set_multi_null_confirmed": {
+      "readability_status": "identified",
+      "support_scope": "not_asserted",
+      "persistence_status": "not_tested",
+      "selection_status": "multi_null_confirmed"
+    },
+    "candidate_specific_multi_null_confirmed": {
+      "readability_status": "identified",
+      "support_scope": "not_asserted",
+      "persistence_status": "not_tested",
+      "selection_status": "candidate_specific_multi_null_confirmed"
+    },
+    "null_family_sensitive": {
+      "readability_status": "protocol_sensitive",
+      "support_scope": "not_asserted",
+      "persistence_status": "not_tested",
+      "selection_status": "null_family_sensitive"
+    },
+    "unadjusted_readout_only": {
+      "readability_status": "identified",
+      "support_scope": "not_asserted",
+      "persistence_status": "not_tested",
+      "selection_status": "unadjusted"
+    }
+  },
+  "note": "High-replicate focused follow-up for the strongest observed candidates. It improves p-value precision for candidate-specific and top-candidate-set null audits, but it does not replace the full restricted-lattice multi-null audit and does not assert generator support."
+}
