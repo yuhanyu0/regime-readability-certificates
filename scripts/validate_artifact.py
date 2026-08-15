@@ -77,7 +77,8 @@ manifest=json.load(open(ROOT/'MANIFEST.json'))
 listed=set(manifest['files'])
 actual=set()
 for p in sorted(ROOT.rglob('*')):
-    if p.is_file() and p.name!='MANIFEST.json' and 'outputs' not in p.relative_to(ROOT).parts:
-        actual.add(p.relative_to(ROOT).as_posix())
+    rel=p.relative_to(ROOT)
+    if p.is_file() and p.name!='MANIFEST.json' and 'outputs' not in rel.parts and '.git' not in rel.parts:
+        actual.add(rel.as_posix())
 require(actual==listed,'manifest file set mismatch')
 print('PASS RRC public artifact validation')
