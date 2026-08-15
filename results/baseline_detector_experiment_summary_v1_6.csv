@@ -1,0 +1,6 @@
+world,GMM,HMM,change_point,threshold,readability_status,support_scope,persistence_status,selection_status,interpretation
+coarse_stride_switching,False,False,False,False,not_identifiable,oracle_asserted,not_identifiable,not_applicable,coarse stride leaves too few transition opportunities
+hidden_supported,False,False,False,True,hidden,oracle_asserted,not_tested,not_applicable,weak interface hides an oracle-supported split
+occupancy_migration,True,True,True,True,identified,not_asserted,not_tested,not_applicable,"regime-change readout is migration across phase space, not fixed-slice switching"
+stable_null,False,False,False,True,not_identifiable,support_rejected,not_tested,not_applicable,low signal should not be promoted
+surface_phantom,True,False,False,True,phantom,support_rejected,unstable,not_applicable,visible separation without generator support

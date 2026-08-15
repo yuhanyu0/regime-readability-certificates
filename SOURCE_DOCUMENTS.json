@@ -1,0 +1,46 @@
+{
+  "source_lock_version": "v0.1",
+  "manuscript": {
+    "pdf_name": "RRC_Manuscript_v3_7.pdf",
+    "pdf_bytes": 591687,
+    "pdf_sha256": "36f106a1ba6b2e8f524ca3b5d52aab6577596144a9117b6c01de1f6bb5a02ae9",
+    "tex_name": "RRC_Manuscript_v3_7.tex",
+    "tex_bytes": 61890,
+    "tex_sha256": "6af9dace91fcf54ad59457de84f455b9b4dac4694d766f14b7ed0c4c05edb8e3",
+    "distributed_in_public_v0_1": false
+  },
+  "recovered_code": {
+    "baseline_detector_audit_v16.py": {
+      "bytes": 13923,
+      "sha256": "9964e12ffb87889889b2e22bcee61647b68c914da635138b22ada54d8c285e87",
+      "distributed_as_byte_identical_source": false,
+      "public_release_status": "curated_behaviorally_qualified_runner"
+    },
+    "market_full_gmm_audits_v21.py": {
+      "bytes": 22901,
+      "sha256": "14ed53f4b9d42a783398af00bdf96f92d07c86f4aebb6711d596a49c77c1e2df",
+      "distributed_in_public_v0_1": false
+    },
+    "market_multinull_gmm_audit_v23.py": {
+      "bytes": 16687,
+      "sha256": "c720d460d208b4aadbdcc27c7535368ec745076a0835cecd077649ace7e3e65c",
+      "distributed_in_public_v0_1": false
+    },
+    "market_multinull_focus_audit_v24.py": {
+      "bytes": 16686,
+      "sha256": "872e7286e33bcfcb8905faf5bb098bb01b96d8f6c07e805dedb1212df0137647",
+      "distributed_in_public_v0_1": false
+    }
+  },
+  "frozen_tables": {
+    "baseline_detector_experiment_summary_v1_6.csv": {"bytes": 858, "sha256": "a32070d725977f0aaee0d68fd22409e6f6342df10b80a237e273ec48526d06c5"},
+    "baseline_detector_seed_sweep_summary_v1_9.csv": {"bytes": 4019, "sha256": "13b695e3fc3867a97b1fe01543d9b1eece4597eef71792398868aab8c62716d6"},
+    "readability_transition_alpha_sweep_v2_9.csv": {"bytes": 115824, "sha256": "4f4860d1c52add16ec2ee7591df7fd1b1c2c4ff8f22566b1a5d5214e8c8e2d1e", "distributed_in_public_v0_1": false},
+    "readability_transition_resource_query_atlas_v2_9.csv": {"bytes": 21418, "sha256": "262bf524f3bbbdc725171fccd9a88edc9492fa89c8142b3094be7c42093ac681", "distributed_in_public_v0_1": false},
+    "market_band_protocol_sweep.csv": {"bytes": 1160501, "sha256": "3a3cf4e1a2562d504ac96ab364c8ebce1b5170c805cf58042674ad6f27e6d49c", "distributed_in_public_v0_1": false},
+    "market_primary_gmm_bootstrap_aggregate_v2_1.csv": {"bytes": 2325, "sha256": "d5850446cbb426303ff75bb5b96499a6e2b22a6867a3f9e8eb69c2d2785295a4", "distributed_in_public_v0_1": false}
+  },
+  "missing_canonical_market_input": ["market_atlas_series.csv", "market_prices_auto.csv"],
+  "missing_input_note": "The exact frozen market derived series or cached price panel has not been recovered as a standalone canonical source asset; v0.1 does not substitute current downloads.",
+  "public_compaction_note": "Large source tables, manuscript snapshots, and non-self-contained market runners are provenance-locked by SHA-256; public v0.1 exposes compact summaries/status maps plus a behaviorally qualified synthetic audit runner."
+}

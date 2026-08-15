@@ -1,0 +1,23 @@
+{
+  "certificate_id": "readability_transition_v2_9",
+  "claim_type": "controlled_readability_transition",
+  "generator": "fixed latent distinction Z in {-1,+1}",
+  "protocol_family": "Y_alpha = alpha Z + noise with query coverage and compression budget variations",
+  "support_scope": "oracle_asserted",
+  "readability_statuses_observed": [
+    "ambiguous",
+    "hidden",
+    "identified",
+    "protocol_sensitive"
+  ],
+  "main_message": "The latent distinction is fixed; the certificate status changes because the observation-compression protocol changes.",
+  "not_claimed": [
+    "physical phase transition in the latent generator",
+    "empirical market ontology",
+    "universal detector superiority"
+  ],
+  "tables": [
+    "outputs/tables/readability_transition_alpha_sweep_v2_9.csv",
+    "outputs/tables/readability_transition_resource_query_atlas_v2_9.csv"
+  ]
+}
